@@ -79,9 +79,9 @@ class BST{
         return false
     }
 
-    //DEPTH FIRST SEARCH => branch by branch
+    //DEPTH FIRST SEARCH => branch by branch=>pre order
 
-    // in-order: left->root->left ---> 2,3,12,15,28,36,39
+    // in-order: left->root->right---> 2,3,12,15,28,36,39
     dfsinorder(){
         let results = []
 
@@ -143,6 +143,7 @@ class BST{
     bf(){
         let results = []
         let queue = []
+        //initial step add the first node to the queue so that you can start the exploration
         queue.push(this.root)
 
         while(queue.length > 0){
